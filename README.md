@@ -53,11 +53,11 @@ AWS CodeBuild is a fully managed continuous integration service that compiles so
 
 ## Activities
 To begin with, our team thought it would be a good idea to get a feel for the application, which involved taking a look at the file structure, understanding the code and running it locally. Here is a list of the local activities we engaged in:
-* Started the backend using the command: ``` ./mvnw spring-boot:run```. 
+* Started the backend using the command: ``` ./mvnw spring-boot:run```
 * Installed the correct dependencies, mainly angular-cli version 11.2.11
-* Started a development server with the command: ```ng serve```.
-* We built the application in a dedicated docker image using the provided Dockerfile: ```docker build -t spring-petclinic-angular:latest .```.
-* Ran the tests locally using the command: ```ng test```.
+* Started a development server with the command: ```ng serve```
+* We built the application in a dedicated docker image using the provided Dockerfile: ```docker build -t spring-petclinic-angular:latest .```
+* Ran the tests locally using the command: ```ng test```
 
 Each of these tasks were successfully completed, the backend and frontend were both operating efficiently, the application was locally containerised, and all of the tests were successful. 
 
