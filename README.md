@@ -46,12 +46,12 @@ Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity i
 AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates. After some discussion and planning, our team created a multi-stage pipeline that uses two sources: one for the frontend, and one for the backend. The pipeline was also configured to have a webhook in place, so that each time a user pushes a commit to GitHub, the pipeline goes through each phase automatically.
 AWS CodeBuild
 AWS CodeBuild is a fully managed continuous integration service that compiles source code, runs tests, and produces ready-to-deploy software packages. 
-AWS Elastic Container Service (ECS)
+
+### AWS Elastic Container Service (ECS)
 
 ### Elastic Container Registry (ECR)
 
-## Solution
-### Local
+## Activities
 To begin with, our team thought it would be a good idea to get a feel for the application, which involved taking a look at the file structure, understanding the code and running it locally. Here is a list of the local activities we engaged in:
 * Started the backend using the command: ``` ./mvnw spring-boot:run```. 
 * Installed the correct dependencies, mainly angular-cli version 11.2.11
@@ -61,7 +61,7 @@ To begin with, our team thought it would be a good idea to get a feel for the ap
 
 Each of these tasks were successfully completed, the backend and frontend were both operating efficiently, the application was locally containerised, and all of the tests were successful. 
 
-### Remote
+## Solution 
 
 
 
