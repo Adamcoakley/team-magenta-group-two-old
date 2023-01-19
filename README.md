@@ -143,8 +143,17 @@ Although the concepts and technologies specified in the brief were familiar to u
 We ran into many different technical issues throughout the course of the project, some cost us more time than others. IAM policies were a consistent issue as we had little experience with them, we are now well versed in how to attach them to users and roles. We ran into hardware issues with using docker on our laptops and the mySQL docker image proved an issue with three of the four people in our group who have mac laptops. 
 
 ## Future Work
+The first step would be to add a test server instead of deploying the changes directly into the production server. The advantages of deploying this way are:
+* Avoid bugs or errors that could interfere in the normal activity of the app.
+* Double test to ensure everything works as expected.
+* Playground for developers to deploy possible future app features without compromising the integrity of the production app.
+On the other hand, this solution requires another server running which can increase the cost of maintaining the process.
+
+As the project was short, we did not make use of infrastructure as a code (IaC)
+. However, as a team we now understand it's benefits and can envision a solution where IaC would be really helpful. Going forward, we would like to make use of an IaC tool, terraform, ansible or cloudformation to make the solution to improve many aspects of the solution, including: maintenance, consistency, and the ability to reproduce an environment.
 
 ## Conclusion
+In conclusion, we can say that the project has exceeded our expectations in terms of difficulty. Combining all the tools that we have been learning throughout the program has been tough, mainly due to the blockers we faced, for example, AWS permissions. However, as a group, we came together and put in a great effort, which resulted in a positive experience overall.
 
 ## Acknowledgments
 We want to express our gratitude to Deloitte and the members of the Cloud Engineering team for their assistance and for hospitably hosting us on several occasions throughout our training.
