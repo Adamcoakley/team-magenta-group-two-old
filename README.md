@@ -115,6 +115,11 @@ Each of these tasks were successfully completed, the backend and frontend were b
 
 
 ## Solution 
+The completed pipeline detects changes to your image, which is stored in an image repository such as Amazon ECR, and uses CodeDeploy to route and deploy traffic to an Amazon ECS cluster and load balancer.
+
+<p align="center">
+    <img src="https://github.com/Adamcoakley/team-magenta-group-two/blob/main/readme-images/pipeline.png?raw=true">
+</p>
 
 ## Cost 
 ​​AWS offers a pay-as-you-go approach for pricing for the vast majority of their cloud services. With AWS you pay only for the individual services you need, for as long as you use them, and without requiring long-term contracts or complex licensing. There are no additional costs or termination fees.
