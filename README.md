@@ -29,6 +29,10 @@ We adopted an andapted Agile approach to this project. We organised the workload
 
 We set-up a software development project on Jira to help us visualise, track and organise our project. The project manager from the first day of the project setup the product backlog and populated it with all the epics, userstories and tasks that we imagined we would need to execute our plan for the week. As this was our first project of this scale, we allowed the subsequent project managers to edit or add any tasks or user-stories to the sprint that we had not originally envisioned. We assigned each user-story/issue a story-point estimate and a member of the group. The Scrum Master and Project Manager collaborated on facilitating the daily stand-ups in which the group members brought eachother up-to-date on their progress and outlined any blockers they had been facing. As team members worked on and completed aspects of the project they edited the board on Jira to reflect their progress.  
 
+## Risk Assessment 
+Before embarking on the project our team devised a cursory risk assessment (shown below) which outlines possible hazards that the application could encounter. These risks influenced our choices when developing the CI/CD pipeline for the application. For example, we followed the principal of least privilege when assigning policies to the AWS resources and users needed for our pipeline. We also chose to use reputable repository services for our source code and container images as well as avoiding sharing or hardcoding sensitive information. Going forward we would like to further increase the security and reliability of the application and our CI/CD pipeline by integrating AWS resources such as GuardDuty.
+
+
 ## Technologies Used 
 ### GitHub
 For version control, git was used, with the project repository hosted on GitHub. On top of that, the feature branch model was used, which means, a separate branch was created for each additional feature. Once the functionality was developed, the feature branch was merged with the master branch and our team repeated this process until the project was complete.
@@ -44,12 +48,15 @@ Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity i
 
 ### AWS CodePipeline
 AWS CodePipeline is a fully managed continuous delivery service that helps you automate your release pipelines for fast and reliable application and infrastructure updates. After some discussion and planning, our team created a multi-stage pipeline that uses two sources: one for the frontend, and one for the backend. The pipeline was also configured to have a webhook in place, so that each time a user pushes a commit to GitHub, the pipeline goes through each phase automatically.
-AWS CodeBuild
-AWS CodeBuild is a fully managed continuous integration service that compiles source code, runs tests, and produces ready-to-deploy software packages. 
+
+## AWS CodeBuild
+AWS CodeBuild is a fully managed continuous integration service that compiles source code, runs tests, and produces ready-to-deploy software packages. We used buildspec files on both the frontend and backend repository to containerise the application and push images to ECR.
 
 ### AWS Elastic Container Service (ECS)
+We chose ECS as our deployment option because its a highly scalable container orchestration and deployment service that is native to AWS. It eliminates the need to install, operate and scale our own cluster management infrastructure. 
 
 ### Elastic Container Registry (ECR)
+We chose to use ECR over the more traditional DockerHub because it’s integrated with the other AWS service, particularly with ECS. It automatically encrypts images at rest and transfers images over HTTPS. Access to individual repositories on ECR can be managed with IAM policies.
 
 ## Activities
 To begin with, our team thought it would be a good idea to get a feel for the application, which involved taking a look at the file structure, understanding the code and running it locally. Here is a list of the local activities we engaged in:
@@ -62,6 +69,33 @@ To begin with, our team thought it would be a good idea to get a feel for the ap
 Each of these tasks were successfully completed, the backend and frontend were both operating efficiently, the application was locally containerised, and all of the tests were successful. 
 
 ## Solution 
+
+## Cost 
+​​AWS offers a pay-as-you-go approach for pricing for the vast majority of their cloud services. With AWS you pay only for the individual services you need, for as long as you use them, and without requiring long-term contracts or complex licensing. There are no additional costs or termination fees.
+
+For this project we used AWS Pricing Calculator to get an estimate on the cost of the technologies we are going to use. First we did an estimate for the technologies we had initially planned to use at the start of the week.
+
+## Constraints
+### Time
+We found the four days we had to complete the project to be quite restricting. We encountered more problems than we had hoped for, and sadly, they took longer to resolve than we had anticipated. Our time management could have been more effective, which would have led to a better solution as time was our biggest constraint. We will be more capable of estimating and managing our time while developing and troubleshooting as we gain more experience.
+
+### Lack of Clarity 
+Although the concepts and technologies specified in the brief were familiar to us, this was our first time using them in a project of this scale. Due to our lack of knowledge regarding the ideal technology stack, we were hesitant to choose one technology over another. By working incredibly hard and for long hours, our team did make a valiant effort to solve our problems. We believe that after attempting a project of this size and scope, our uncertainty about how to approach this solution is quickly dissipating.
+
+### AWS Permissions
+We ran into many different technical issues throughout the course of the project, some cost us more time than others. IAM policies were a consistent issue as we had little experience with them, we are now well versed in how to attach them to users and roles. We ran into hardware issues with using docker on our laptops and the mySQL docker image proved an issue with three of the four people in our group who have mac laptops. 
+
+## Future Work
+
+## Conclusion
+
+## Acknowledgments
+We want to express our gratitude to Deloitte and the members of the Cloud Engineering team for their assistance and for hospitably hosting us on several occasions throughout our training.
+
+We want to express our appreciation to AMS and the staff there for their unwavering support and guidance.
+
+We appreciate QA and the training team for supplying us with the knowledge required to complete this assignment.
+
 
 
 
