@@ -1,4 +1,20 @@
 # Team Magenta, Group Two
+
+## Contents
+* [Introduction](#Introduction)
+* [Team](#Team-Members)
+* [Objective](#Objective)
+* [Project Management](#Project-Management)
+* [Risk Assessment](#Risk-Assessment)
+* [Technologies Used ](#Technologies-Used )
+* [Activities](#Activities)
+* [Solution](#Solution)
+* [Cost](#Cost)
+* [Constraints](#Constraints)
+* [Future Work](#Future-Work)
+* [Conclusion](#Conclusion)
+* [Acknowledgments](#Acknowledgments)
+
 ## Introduction 
 The aim of this project is to migrate the Petclinic application, and all of their resources to the cloud. This project will involve concepts from all core training modules; more specifically, this will involve:
 * Agile & Project Management 
@@ -27,10 +43,27 @@ And the overall objective of the project was to: *“plan, design and implement 
 ## Project Management
 We adopted an andapted Agile approach to this project. We organised the workload across the four-day time limit that became our sprint.  We assigned the traditional roles of Project Manager and Scrum Master to a new member of the group each day as well as the role of Activity Logger who kept minutes on which member of the group was working on which aspect of the project. We rotated these roles everyday to give each member of the group equal opportunity to explore the responsibilities of the individual roles. 
 
-We set-up a software development project on Jira to help us visualise, track and organise our project. The project manager from the first day of the project setup the product backlog and populated it with all the epics, userstories and tasks that we imagined we would need to execute our plan for the week. As this was our first project of this scale, we allowed the subsequent project managers to edit or add any tasks or user-stories to the sprint that we had not originally envisioned. We assigned each user-story/issue a story-point estimate and a member of the group. The Scrum Master and Project Manager collaborated on facilitating the daily stand-ups in which the group members brought eachother up-to-date on their progress and outlined any blockers they had been facing. As team members worked on and completed aspects of the project they edited the board on Jira to reflect their progress.  
+We set-up a software development project on Jira to help us visualise, track and organise our project. The project manager from the first day of the project setup the product backlog and populated it with all the epics, userstories and tasks that we imagined we would need to execute our plan for the week. As this was our first project of this scale, we allowed the subsequent project managers to edit or add any tasks or user-stories to the sprint that we had not originally envisioned. We assigned each user-story/issue a story-point estimate and a member of the group. The Scrum Master and Project Manager collaborated on facilitating the daily stand-ups in which the group members brought eachother up-to-date on their progress and outlined any blockers they had been facing. As team members worked on and completed aspects of the project they edited the board on Jira to reflect their progress.
+
+<p align="center">
+    <img src="https://github.com/Adamcoakley/team-magenta-group-two/blob/main/readme-images/jira-board.png?raw=true">
+</p>
+
+<p align="center">
+    <img src="https://github.com/Adamcoakley/team-magenta-group-two/blob/main/readme-images/burndown.png?raw=true">
+</p>
+
+<p align="center">
+    <img src="https://github.com/Adamcoakley/team-magenta-group-two/blob/main/readme-images/epic-progress.png?raw=true">
+</p>
+
 
 ## Risk Assessment 
 Before embarking on the project our team devised a cursory risk assessment (shown below) which outlines possible hazards that the application could encounter. These risks influenced our choices when developing the CI/CD pipeline for the application. For example, we followed the principal of least privilege when assigning policies to the AWS resources and users needed for our pipeline. We also chose to use reputable repository services for our source code and container images as well as avoiding sharing or hardcoding sensitive information. Going forward we would like to further increase the security and reliability of the application and our CI/CD pipeline by integrating AWS resources such as GuardDuty.
+
+<p align="center">
+    <img src="https://github.com/Adamcoakley/team-magenta-group-two/blob/main/readme-images/risk-assessment.png?raw=true">
+</p>
 
 
 ## Technologies Used 
@@ -68,6 +101,19 @@ To begin with, our team thought it would be a good idea to get a feel for the ap
 
 Each of these tasks were successfully completed, the backend and frontend were both operating efficiently, the application was locally containerised, and all of the tests were successful. 
 
+<p align="center">
+    <img src="https://github.com/Adamcoakley/team-magenta-group-two/blob/main/readme-images/tests-cli.png?raw=true">
+</p>
+
+<p align="center">
+    <img src="https://github.com/Adamcoakley/team-magenta-group-two/blob/main/readme-images/tests-karma.png?raw=true">
+</p>
+
+<p align="center">
+    <img src="https://github.com/Adamcoakley/team-magenta-group-two/blob/main/readme-images/angular-app.png?raw=true">
+</p>
+
+
 ## Solution 
 
 ## Cost 
@@ -75,12 +121,18 @@ Each of these tasks were successfully completed, the backend and frontend were b
 
 For this project we used AWS Pricing Calculator to get an estimate on the cost of the technologies we are going to use. First we did an estimate for the technologies we had initially planned to use at the start of the week.
 
+<p align="center">
+    <img src="https://github.com/Adamcoakley/team-magenta-group-two/blob/main/readme-images/cost-report.png?raw=true">
+</p>
+
+You can also view the cost report as a pdf [here.](https://github.com/Adamcoakley/team-magenta-group-two/blob/main/cost/aws-cost-report.pdf)
+
 ## Constraints
 ### Time
 We found the four days we had to complete the project to be quite restricting. We encountered more problems than we had hoped for, and sadly, they took longer to resolve than we had anticipated. Our time management could have been more effective, which would have led to a better solution as time was our biggest constraint. We will be more capable of estimating and managing our time while developing and troubleshooting as we gain more experience.
 
 ### Lack of Clarity 
-Although the concepts and technologies specified in the brief were familiar to us, this was our first time using them in a project of this scale. Due to our lack of knowledge regarding the ideal technology stack, we were hesitant to choose one technology over another. By working incredibly hard and for long hours, our team did make a valiant effort to solve our problems. We believe that after attempting a project of this size and scope, our uncertainty about how to approach this solution is quickly dissipating.
+Although the concepts and technologies specified in the brief were familiar to us, this was our first time using them in a project of this scale. Due to our lack of knowledge regarding the ideal technology stack, we were hesitant to choose one technology over another. By working incredibly hard and for long hours, our team did make a valiant effort to solve our problems. We believe that after attempting a project of this size and scope, our uncertainty about how to approach such a project has improved.
 
 ### AWS Permissions
 We ran into many different technical issues throughout the course of the project, some cost us more time than others. IAM policies were a consistent issue as we had little experience with them, we are now well versed in how to attach them to users and roles. We ran into hardware issues with using docker on our laptops and the mySQL docker image proved an issue with three of the four people in our group who have mac laptops. 
