@@ -149,7 +149,7 @@ The first step would be to add a test server instead of deploying the changes di
 * Playground for developers to deploy possible future app features without compromising the integrity of the production app.
 On the other hand, this solution requires another server running which can increase the cost of maintaining the process.
 
-As the project was short, we did not make use of infrastructure as a code (IaC). However, as a team we now understand it's benefits and can envision a solution where IaC would be really helpful. Going forward, we would like to make use of an IaC tool, terraform, ansible or cloudformation to make the solution to improve many aspects of the solution, including: maintenance, consistency, and the ability to reproduce an environment.
+As the project was short, we did not make use of infrastructure as a code (IaC). However, as a team we now understand it's benefits and can envision a solution where IaC would be really helpful. Going forward, we would like to make use of an IaC tool, terraform, ansible or cloudformation to improve many aspects of the solution, including: maintenance, consistency, and the ability to reproduce an environment.
 
 ## Conclusion
 In conclusion, we can say that the project has exceeded our expectations in terms of difficulty. Combining all the tools that we have been learning throughout the program has been tough, mainly due to the blockers we faced, for example, AWS permissions. However, as a group, we came together and put in a great effort, which resulted in a positive experience overall.
